@@ -47,16 +47,42 @@ fetch(URL + itemId, {
       &#36;${detail.price}
       </p>
       <a href="./backoffice.html?id=${detail._id}" class="btn btn-primary">Modifica Opera</a>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Elimina Opera</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Elimina Opera
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Elimina Opera</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Vuoi davvero ELIMINARE l'Opera?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+              <button type="button" class="btn btn-danger" id="deleteWork">Elimina</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+ 
 
-    </div>
-  </div>`
+
+  
+  `
   
     const itemsRow = document.getElementById('items-row')
     itemsRow.appendChild(newCol)
 
     // assegno al pulsante elimina il suo comportamento
-    let deleteButton = document.querySelector('.btn-danger')
+    let deleteButton = document.getElementById('deleteWork')
     deleteButton.addEventListener('click', function () {
       // "DELETE"
   

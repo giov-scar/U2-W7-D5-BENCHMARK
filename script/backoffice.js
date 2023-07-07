@@ -34,8 +34,8 @@ if (itemId) {
 
         itemName.value = detail.name
         itemDescription.value = detail.description
-        brand.value = detail.artist
-        imageUrl.value = detail.image
+        brand.value = detail.brand
+        imageUrl.value = detail.imageUrl
         itemPrice.value = detail.price
     })
     .catch((err)=>console.log(err))
